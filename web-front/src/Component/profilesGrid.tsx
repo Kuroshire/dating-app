@@ -1,18 +1,21 @@
 import { ProfileOverview } from "./profileOverview";
 import { MockProfileInformations, ProfileInformations } from "../model/profileInformations.model";
+import { Grid } from '@mui/material';
 
 export function ProfilesGrid() {
   const profileList: ProfileInformations[] = MockProfileInformations;
   return (
     <div>
-      <div>
+      <Grid container columns={3} columnSpacing={2}>
           {
             profileList.map((profile) => 
-              <ProfileOverview profilePicture={profile.profilePicture} profileName={profile.profileName}/>
+              <Grid>
+                <ProfileOverview {...profile} />
+              </Grid>
             )
           }
           
-        </div>
+        </Grid>
       </div>
     );
 }

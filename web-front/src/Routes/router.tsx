@@ -13,6 +13,7 @@ export function ReactRouter() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/yourProfile" element={<ProfilePage />} />
+            <Route path="/profile/:userId" element={<ProfilePage />} />
             <Route path="/allProfiles" element={<AllProfilesPage />} />
             <Route path="/matches" element={<MatchesPage />} />
             <Route path="*" element={<NotFoundPage />} />
